@@ -1,0 +1,66 @@
+.header
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	padding-top: 30px
+	&__logo
+		vertical-align: top
+		cursor: pointer
+		text-decoration: none
+		font-size: 0
+		float: left
+		margin-top: 5px
+	&__phone
+		float: right
+		text-align: left
+		i
+			display: inline-block
+			vertical-align: middle
+			margin-right: 20px
+		.list-contact
+			display: inline-block
+			vertical-align: middle
+		.list-contact li
+			display: block
+			a
+				text-decoration: none
+				color: $white
+				display: block
+				font-size: $text-reg
+				+font-family($circle-reg)
+				span
+					color: $orange
+
+
+// hiro
+.hiro
+	background-image: url('../img/bg-header.png')
+	text-align: center
+	+cover
+	&__info
+		display: inline-block
+		vertical-align: top
+		padding-top: 160px
+		padding-bottom: 50px
+		max-width: 570px
+		h1
+			font-size: $text-lg //40px
+			color: $white
+			+font-family($circle-bld)
+			line-height: 1.1
+			margin-bottom: 50px
+			letter-spacing: -0.20rem
+	&__date
+		border: 6px solid $orange
+		transform: skewX(-40deg)
+		padding: 12px 0
+		max-width: 310px
+		margin: 0 auto 65px
+		p
+			font-size: $text-md
+			+font-family($circle-reg)
+			display: inline-block
+			line-height: 1
+			transform: skewX(40deg)
+			color: $white

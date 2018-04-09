@@ -1,0 +1,37 @@
+body
+	background: $white
+	line-height: 1.4
+	font-size: $text-reg //16px
+	+font-family($circle-reg)
+.inner
+	max-width: 1170px
+	margin: 0 auto
+	padding: 0 70px
+	+clr
+
+i[class*="icon-"]
+	display: block
+
+
+
+.text-through
+	text-decoration: line-through
+
+.shape
+	&-bordered
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			top: 70%
+			left: 0
+			width: 100%
+			background-image: linear-gradient( -175deg, rgb(237,55,46) 0%, rgb(237,84,37) 100%)
+			height: 9px
+			z-index: 2
+		&.colored:before
+			background-image: linear-gradient( -175deg, #fbba5d 0%, #f06b7a 100%)
+	&-text
+		z-index: 9999
+		position: relative

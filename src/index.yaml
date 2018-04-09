@@ -1,0 +1,5 @@
+ProjectTitle: test-template
+
+PageList:
+- file: page.html
+  ready: 50

@@ -1,0 +1,46 @@
+.footer
+	padding: 25px 0
+	background-color: $black-1
+	&__logo
+		margin-bottom: 30px
+		display: block
+		cursor: pointer
+	&__phone
+		float: left
+		ul
+			font-size: 0
+		ul li
+			display: block
+		ul li
+			a, p
+				color: $white
+				font-size: $text-md //18px
+				line-height: 1.625
+			a
+				text-decoration: none
+	&__contact
+		float: right
+		ul
+			display: flex
+			justify-content: space-between
+			flex-direction: row
+			max-width: 200px
+			margin: 10px 0 20px
+		.copy
+			margin-bottom: 10px
+		p
+			color: $white
+			font-size: $text-reg //16px
+			a
+				text-decoration: none
+				color: inherit
+				display: inline-block
+				margin: 0
+		a
+			color: $violet
+			font-size: $text-sm //14px
+			display: block
+			transition: color .24s ease-in-out
+			margin-top: 10px
+			&:hover
+				color: lighten($violet, 10)

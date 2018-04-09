@@ -1,0 +1,389 @@
+.promises
+	background-image: url('../img/bg-promises.png')
+	+cover
+	padding: 70px 0 75px 0
+	text-align: center
+	h2
+		font-size: 40px
+		color: $white
+		display: inline-block
+		+font-family($circle-reg)
+		span
+			+font-family($circle-bld)
+			color: $orange
+	ul
+		font-size: 0
+		display: flex
+		justify-content: space-between
+		flex-direction: row
+		margin-top: 60px
+		margin-bottom: 100px
+	ul li
+		max-width: 300px
+		text-align: left
+		i
+			display: block
+			margin-left: 0
+			margin-bottom: 40px
+		p
+			font-size: $text-md //18px
+			line-height: 1.625
+			color: $white
+			span
+				color: $orange
+				display: block
+	&__author
+		display: inline-block
+		vertical-align: top
+		font-size: 0
+		+clr
+		&-photo
+			float: left
+			width: 265px
+			height: 265px
+			+cover
+			margin-right: 70px
+		&-text
+			text-align: left
+			margin-left: 335px
+			padding-top: 30px
+			p
+				color: $white
+				font-size: $text-md //18px
+				line-height: 1.625
+				&:not(:last-child)
+					margin-bottom: 30px
+
+
+//special
+.special
+	padding-top: 65px
+	padding-bottom: 105px
+	background-color: $white-f3
+	&__title
+		font-size: $text-lg //18px
+		color: $black-c0
+		line-height: 1
+		margin-bottom: 52px
+		+font-family($circle-bld)
+		&.title-lg
+			font-size: 34px
+			margin-bottom: 32px
+			span
+				display: inline-block
+	&__items
+		display: flex
+		justify-content: space-between
+		flex-direction: row
+		max-width: 830px
+		margin: 0 auto
+		&.justify-center
+			justify-content: center
+			.special__item
+				max-width: 100%
+			.special__box
+				max-width: 370px
+				margin: 0 auto
+	&__item
+		max-width: 370px
+		width: 100%
+		text-align: center
+		.title-theme
+			font-size: 24px
+			color: $black-c0
+			margin-bottom: 52px
+	&__box
+		background-color: $white
+		padding: 30px 0 60px 0
+		position: relative
+		.btn-gradient
+			position: absolute
+			bottom: -25px
+			transform: translateX(-50%)
+			left: 50%
+		p
+			color: $black-c0
+			font-size: $text-md //18px
+			line-height: 1
+			&.text-md
+				font-size: 20px
+				color: $gray-89
+				margin: 30px auto 20px
+			&.text-lg
+				color: $black-c0
+				font-size: 60px
+				position: relative
+				display: block
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					top: 50%
+					left: 50%
+					width: 80%
+					height: 11px
+					transform: translate(-50%, -50%)
+					box-shadow: 0 0 30px $white
+
+// sponsion
+.sponsion
+	padding: 100px 0
+	background-image: url('../img/bg-sponsion.jpg')
+	+cover
+	position: relative
+	overflow: hidden
+	&__text
+		padding-left: 30px
+		margin-left: 30px
+		max-width: 800px
+		position: relative
+		&:before
+			content: ""
+			position: absolute
+			left: 0
+			top: 0
+			height: 100%
+			width: 8px
+			background-image: -moz-linear-gradient( 90deg, rgb(225,0,25) 0%, rgb(252,96,0) 100%)
+			background-image: -webkit-linear-gradient( 90deg, rgb(225,0,25) 0%, rgb(252,96,0) 100%)
+			background-image: linear-gradient( 90deg, rgb(225,0,25) 0%, rgb(252,96,0) 100%)
+		h3
+			color: $white
+			+font-family($circle-bld)
+			font-size: 24px
+			margin-bottom: 40px
+		p
+			font-size: $text-md
+			color: $white
+	.pic-sponsion
+		position: absolute
+		right: 15%
+		opacity: .27
+		top: -25px
+		pointer-events: none
+
+
+// reviews
+.reviews
+	background-color: $white
+	padding: 100px 0
+	text-align: center
+	.list-info
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		margin-top: 65px
+		li
+			display: inline-block
+			vertical-align: top
+			text-align: left
+			width: 30%
+			> ul li
+				display: block
+				width: 100%
+				position: relative
+				padding-left: 20px
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					left: 0
+					top: 5px
+					+arr(8, 10, $orange, r)
+
+			> ul li p
+				font-size: $text-md //18px
+				+font-family($circle-reg)
+				color: $black-c0
+				margin-bottom: 10px
+				&.mb-2x
+					margin-bottom: 32px
+		li .title-text
+			+font-family($circle-bld)
+			font-size: 20px
+			margin-bottom: 40px
+	.read
+		font-size: 0
+		display: flex
+		justify-content: space-between
+		flex-direction: row
+		margin-bottom: 80px
+		&-overlay
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			height: 50%
+			width: 100%
+			background-color: rgba($white, .81)
+		&__col
+			text-align: center
+			h3
+				margin-bottom: 52px
+				color: $black-c0
+				font-size: 34px
+				+font-family($circle-bld)
+		&__box
+			text-align: left
+			padding: 45px 60px 20px
+			box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.031)
+			max-width: 500px
+			box-sizing: border-box
+			height: 470px
+			position: relative
+			.btn
+				position: absolute
+				bottom: 70px
+				z-index: 9999
+				left: 50%
+				transform: translateX(-50%)
+		&__box p
+			font-size: $text-md //18px
+			+font-family($circle-reg)
+			color: $black-c0
+			&:not(:last-child)
+				margin-bottom: 36px
+
+.slider
+	&-author
+		position: relative
+		margin-top: 100px
+		.aside
+			position: absolute
+			top: -35px
+			right: 0
+			width: 100%
+			max-width: 270px
+			box-shadow: 0 0 35px 0 rgba(0,0,0,.031)
+			background-color: $white
+			&__avatar
+				+cover
+				width: 103px
+				display: block
+				position: absolute
+				top: 30px
+				left: 50%
+				transform: translateX(-50%)
+				height: 103px
+			&__heading
+				background-color: $black-c0
+				height: 80px
+				display: block
+				position: relative
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					top: -4
+					left: 50%
+					width: 170px
+					height: 8px
+					transform: translateX(-50%)
+					background-image: linear-gradient( 4deg, rgb(255,25,25) 0%, rgb(255,134,15) 100%)
+					background-image: -mos-linear-gradient( 4deg, rgb(255,25,25) 0%, rgb(255,134,15) 100%)
+					background-image: -webkit-linear-gradient( 4deg, rgb(255,25,25) 0%, rgb(255,134,15) 100%)
+					background-image: -ms-linear-gradient( 4deg, rgb(255,25,25) 0%, rgb(255,134,15) 100%)
+			&__body
+				padding: 75px 50px 50px
+				p
+					color: $black-c0
+					font-size: $text-reg
+					&.position
+						margin: 30px auto
+						display: block
+					&.name
+						font-weight: bold
+	&__quote
+		font-size: 0
+		text-align: left
+		max-width: 550px
+		margin: auto 0
+		padding-top: 40px
+		position: relative
+		&:before
+			content: '“'
+			font-size: 183px
+			color: $gray
+			display: block
+			position: absolute
+			top: -15px
+			left: -45px
+			opacity: .10
+		p
+			font-size: $text-md
+			color: $black-c0
+	&__heading
+		height: 78px
+		line-height: 78px
+		justify-content: space-between
+		display: flex
+		background-image: url('../img/shape-heading.png')
+		+cover
+		flex-direction: row
+		padding: 0 110px
+	&__name
+		font-size: 20px
+	&__counter
+		margin-right: 120px
+		font-size: 0
+		z-index: 9999
+		color: $black
+		position: absolute
+		top: 20px
+		right: 200px
+		i
+			display: inline-block
+			vertical-align: middle
+		p
+			font-size: 26px
+			color: $white
+			display: inline-block
+			vertical-align: middle
+	&__name,
+	&__counter
+		display: inline-block
+		vertical-align: top
+		color: $white
+	&__author
+		font-size: 0
+	&__item
+		display: inline-block
+		width: 100%
+		position: relative
+	&__photo
+		+cover
+		width: 210px
+		height: 210px
+		display: inline-block
+		vertical-align: top
+		position: absolute
+		top: 0
+		left: 0
+	&__field
+		display: inline-block
+		vertical-align: top
+		width: 100%
+		max-width: 800px
+	&__field table
+		width: 80%
+		margin: 30px auto
+		position: relative
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			bottom: -30px
+			width: calc(100% - 60px)
+			left: 0
+			height: 1px
+			background-color: $gray
+		tr td
+			font-size: 18px
+			color: $black-c0
+			padding: 0 25px
+			text-align: left
+		tbody tr td
+			+font-family($circle-bld)
+			font-weight: bold
+		thead tr td
+			+font-family($circle-reg)
