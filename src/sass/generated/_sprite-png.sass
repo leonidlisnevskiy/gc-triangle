@@ -1,15 +1,17 @@
 $icons: (0:0)
-$icons: map-merge($icons,('control': (X: 0px, Y:-78px, W: 67px, H: 63px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('fb': (X: -155px, Y:-41px, W: 31px, H: 31px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('guys': (X: -78px, Y:0px, W: 67px, H: 67px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('hands': (X: 0px, Y:0px, W: 68px, H: 68px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('insta': (X: -155px, Y:0px, W: 31px, H: 31px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('next': (X: -80px, Y:-151px, W: 17px, H: 28px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('phone': (X: -41px, Y:-151px, W: 29px, H: 29px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('prev': (X: -118px, Y:-78px, W: 17px, H: 28px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('telegram': (X: 0px, Y:-151px, W: 31px, H: 31px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('vk': (X: -155px, Y:-82px, W: 31px, H: 31px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
-$icons: map-merge($icons,('youtube': (X: -77px, Y:-78px, W: 31px, H: 31px, TW: 186px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('btn-next': (X: -155px, Y:0px, W: 39px, H: 67px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('btn-prev': (X: -204px, Y:0px, W: 38px, H: 67px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('control': (X: 0px, Y:-78px, W: 67px, H: 63px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('fb': (X: -204px, Y:-77px, W: 31px, H: 31px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('guys': (X: -78px, Y:0px, W: 67px, H: 67px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('hands': (X: 0px, Y:0px, W: 68px, H: 68px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('insta': (X: -41px, Y:-151px, W: 31px, H: 31px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('next': (X: -121px, Y:-151px, W: 17px, H: 28px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('phone': (X: -82px, Y:-151px, W: 29px, H: 29px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('prev': (X: -118px, Y:-78px, W: 17px, H: 28px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('telegram': (X: 0px, Y:-151px, W: 31px, H: 31px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('vk': (X: -77px, Y:-78px, W: 31px, H: 31px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('youtube': (X: -155px, Y:-77px, W: 31px, H: 31px, TW: 242px, TH: 182px, IMG: '../img/sprite.png')))
 
 
 // Gets an attribute from the sass map
@@ -47,6 +49,20 @@ $icons: map-merge($icons,('youtube': (X: -77px, Y:-78px, W: 31px, H: 31px, TW: 1
 
 
 
+.icon-btn-next
+  width: 39px
+  height: 67px
+  background-image: url('../img/sprite.png')
+  background-position: -155px 0px
+
+
+.icon-btn-prev
+  width: 38px
+  height: 67px
+  background-image: url('../img/sprite.png')
+  background-position: -204px 0px
+
+
 .icon-control
   width: 67px
   height: 63px
@@ -58,7 +74,7 @@ $icons: map-merge($icons,('youtube': (X: -77px, Y:-78px, W: 31px, H: 31px, TW: 1
   width: 31px
   height: 31px
   background-image: url('../img/sprite.png')
-  background-position: -155px -41px
+  background-position: -204px -77px
 
 
 .icon-guys
@@ -79,21 +95,21 @@ $icons: map-merge($icons,('youtube': (X: -77px, Y:-78px, W: 31px, H: 31px, TW: 1
   width: 31px
   height: 31px
   background-image: url('../img/sprite.png')
-  background-position: -155px 0px
+  background-position: -41px -151px
 
 
 .icon-next
   width: 17px
   height: 28px
   background-image: url('../img/sprite.png')
-  background-position: -80px -151px
+  background-position: -121px -151px
 
 
 .icon-phone
   width: 29px
   height: 29px
   background-image: url('../img/sprite.png')
-  background-position: -41px -151px
+  background-position: -82px -151px
 
 
 .icon-prev
@@ -114,12 +130,12 @@ $icons: map-merge($icons,('youtube': (X: -77px, Y:-78px, W: 31px, H: 31px, TW: 1
   width: 31px
   height: 31px
   background-image: url('../img/sprite.png')
-  background-position: -155px -82px
+  background-position: -77px -78px
 
 
 .icon-youtube
   width: 31px
   height: 31px
   background-image: url('../img/sprite.png')
-  background-position: -77px -78px
+  background-position: -155px -77px
 

@@ -1,12 +1,17 @@
 .footer
 	padding: 25px 0
 	background-color: $black-1
+	+r(768)
+		text-align: center
 	&__logo
 		margin-bottom: 30px
 		display: block
 		cursor: pointer
 	&__phone
 		float: left
+		+r(768)
+			float: none
+			padding: 0 10px
 		ul
 			font-size: 0
 		ul li
@@ -20,12 +25,17 @@
 				text-decoration: none
 	&__contact
 		float: right
+		+r(768)
+			float: none
+			padding: 0 10px
 		ul
 			display: flex
 			justify-content: space-between
 			flex-direction: row
 			max-width: 200px
 			margin: 10px 0 20px
+			+r(768)
+				margin: 20px auto
 		.copy
 			margin-bottom: 10px
 		p

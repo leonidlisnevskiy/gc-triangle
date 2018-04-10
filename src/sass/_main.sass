@@ -3,13 +3,22 @@
 	+cover
 	padding: 70px 0 75px 0
 	text-align: center
+	+r(768)
+		background-image: none
+		background-color: #1e1e1e
+		padding: 30px 0
 	h2
 		font-size: 40px
 		color: $white
 		display: inline-block
 		+font-family($circle-reg)
+		+r(992)
+			font-size: 32px
+		+r(768)
+			font-size: 26px
 		span
 			+font-family($circle-bld)
+			font-weight: bold
 			color: $orange
 	ul
 		font-size: 0
@@ -18,13 +27,23 @@
 		flex-direction: row
 		margin-top: 60px
 		margin-bottom: 100px
+		+r(768)
+			flex-direction: column
+			margin: 50px auto
+			align-items: center
 	ul li
 		max-width: 300px
 		text-align: left
+		+r(768)
+			text-align: center
+			max-width: 100%
+			margin-bottom: 30px
 		i
 			display: block
 			margin-left: 0
 			margin-bottom: 40px
+			+r(768)
+				margin: 0 auto 20px
 		p
 			font-size: $text-md //18px
 			line-height: 1.625
@@ -43,14 +62,23 @@
 			height: 265px
 			+cover
 			margin-right: 70px
+			+r(768)
+				margin: 0 auto 30px
+				float: none
 		&-text
 			text-align: left
 			margin-left: 335px
 			padding-top: 30px
+			+r(768)
+				float: none
+				margin: 0 auto
+				max-width: 90%
 			p
 				color: $white
 				font-size: $text-md //18px
 				line-height: 1.625
+				+r(768)
+					font-size: 16px
 				&:not(:last-child)
 					margin-bottom: 30px
 
@@ -60,15 +88,26 @@
 	padding-top: 65px
 	padding-bottom: 105px
 	background-color: $white-f3
+	+r(992)
+		padding: 30px 0
 	&__title
 		font-size: $text-lg //18px
 		color: $black-c0
 		line-height: 1
 		margin-bottom: 52px
 		+font-family($circle-bld)
+		font-weight: bold
+		+r(768)
+			margin-bottom: 32px
 		&.title-lg
 			font-size: 34px
 			margin-bottom: 32px
+			+r(768)
+				font-size: 28px
+			+r(568)
+				font-size: 24px
+			+r(480)
+				font-size: 22px
 			span
 				display: inline-block
 	&__items
@@ -77,6 +116,9 @@
 		flex-direction: row
 		max-width: 830px
 		margin: 0 auto
+		+r(992)
+			flex-direction: column
+			align-items: center
 		&.justify-center
 			justify-content: center
 			.special__item
@@ -88,6 +130,9 @@
 		max-width: 370px
 		width: 100%
 		text-align: center
+		+r(992)
+			margin-bottom: 60px
+
 		.title-theme
 			font-size: 24px
 			color: $black-c0
@@ -132,11 +177,15 @@
 	+cover
 	position: relative
 	overflow: hidden
+	+r(768)
+		padding: 40px 0
 	&__text
 		padding-left: 30px
 		margin-left: 30px
 		max-width: 800px
 		position: relative
+		+r(768)
+			margin-left: 0
 		&:before
 			content: ""
 			position: absolute
@@ -150,6 +199,7 @@
 		h3
 			color: $white
 			+font-family($circle-bld)
+			font-weight: bold
 			font-size: 24px
 			margin-bottom: 40px
 		p
@@ -161,23 +211,53 @@
 		opacity: .27
 		top: -25px
 		pointer-events: none
+		+r(1200)
+			display: none
 
 
-// reviews
-.reviews
+// authores
+.authores
 	background-color: $white
 	padding: 100px 0
 	text-align: center
+	+r(992)
+		padding: 40px 0
+	.read
+		margin-bottom: 80px
+		+r(992)
+			flex-direction: column
+			justify-content: center
+			align-items: center
+		&__box
+			p
+				+r(768)
+					font-size: 16px
+			.btn.btn-gradient
+				+r(992)
+					padding: 13px 20px
+			+r(992)
+				margin: 0 auto
+				padding: 30px
+				height: auto
+		&__col h3
+			+r(992)
+				margin-top: 20px
+				font-size: 18px
+			+r(768)
+				font-size: 16px
 	.list-info
 		display: flex
 		flex-direction: row
 		justify-content: space-between
 		margin-top: 65px
+		+r(992)
+			flex-direction: column
+			margin-top: 30px
 		li
-			display: inline-block
-			vertical-align: top
 			text-align: left
 			width: 30%
+			+r(992)
+				width: 100%
 			> ul li
 				display: block
 				width: 100%
@@ -200,49 +280,63 @@
 					margin-bottom: 32px
 		li .title-text
 			+font-family($circle-bld)
+			font-weight: bold
 			font-size: 20px
 			margin-bottom: 40px
-	.read
-		font-size: 0
-		display: flex
-		justify-content: space-between
-		flex-direction: row
-		margin-bottom: 80px
-		&-overlay
-			display: block
-			position: absolute
-			bottom: 0
-			left: 0
-			height: 50%
+
+// read
+.read
+	font-size: 0
+	display: flex
+	justify-content: space-between
+	flex-direction: row
+	&-overlay
+		display: block
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 50%
+		width: 100%
+		background-color: rgba($white, .81)
+	&__col
+		text-align: center
+		&.read-lg
 			width: 100%
-			background-color: rgba($white, .81)
-		&__col
-			text-align: center
-			h3
-				margin-bottom: 52px
-				color: $black-c0
-				font-size: 34px
-				+font-family($circle-bld)
-		&__box
 			text-align: left
-			padding: 45px 60px 20px
-			box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.031)
-			max-width: 500px
-			box-sizing: border-box
-			height: 470px
-			position: relative
-			.btn
-				position: absolute
-				bottom: 70px
-				z-index: 9999
-				left: 50%
-				transform: translateX(-50%)
-		&__box p
+			h3
+				margin-left: 90px
+			.read__box
+				max-width: 100%
+				height: auto
+				min-height: 315px
+		h3
+			margin-bottom: 52px
+			color: $black-c0
+			font-size: 34px
+			+font-family($circle-bld)
+			font-weight: bold
+	&__box
+		text-align: left
+		padding: 45px 60px 20px
+		box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.031)
+		max-width: 500px
+		box-sizing: border-box
+		height: 470px
+		position: relative
+		.btn
+			position: absolute
+			bottom: 70px
+			z-index: 9999
+			left: 50%
+			transform: translateX(-50%)
+	&__box
+		p
 			font-size: $text-md //18px
 			+font-family($circle-reg)
 			color: $black-c0
-			&:not(:last-child)
-				margin-bottom: 36px
+			margin-bottom: 36px
+			&:last-child
+				margin-bottom: 0
 
 .slider
 	&-author
@@ -256,6 +350,12 @@
 			max-width: 270px
 			box-shadow: 0 0 35px 0 rgba(0,0,0,.031)
 			background-color: $white
+			+r(992)
+				max-width: 60%
+				margin: 30px auto
+				position: static
+			+r(568)
+				max-width: 100%
 			&__avatar
 				+cover
 				width: 103px
@@ -274,7 +374,7 @@
 					content: ''
 					display: block
 					position: absolute
-					top: -4
+					top: -4px
 					left: 50%
 					width: 170px
 					height: 8px
@@ -285,6 +385,11 @@
 					background-image: -ms-linear-gradient( 4deg, rgb(255,25,25) 0%, rgb(255,134,15) 100%)
 			&__body
 				padding: 75px 50px 50px
+				+r(768)
+					padding: 25px
+					margin-top: 50px
+				+r(568)
+					padding: 15px
 				p
 					color: $black-c0
 					font-size: $text-reg
@@ -321,6 +426,12 @@
 		+cover
 		flex-direction: row
 		padding: 0 110px
+		+r(992)
+			padding: 0 50px
+		+r(768)
+			padding: 0 25px
+		+r(480)
+			justify-content: center
 	&__name
 		font-size: 20px
 	&__counter
@@ -331,6 +442,11 @@
 		position: absolute
 		top: 20px
 		right: 200px
+		+r(992)
+			margin-right: 0
+			right: 30px
+		+r(480)
+			display: none
 		i
 			display: inline-block
 			vertical-align: middle
@@ -359,6 +475,8 @@
 		position: absolute
 		top: 0
 		left: 0
+		+r(992)
+			display: none
 	&__field
 		display: inline-block
 		vertical-align: top
@@ -368,6 +486,8 @@
 		width: 80%
 		margin: 30px auto
 		position: relative
+		+r(992)
+			width: 100%
 		&:after
 			content: ''
 			display: block
@@ -382,8 +502,256 @@
 			color: $black-c0
 			padding: 0 25px
 			text-align: left
+			+r(480)
+				padding: 0 5px
 		tbody tr td
 			+font-family($circle-bld)
 			font-weight: bold
 		thead tr td
 			+font-family($circle-reg)
+
+
+// reviews
+.reviews
+	text-align: center
+	h3
+		font-size: 28px
+		margin-bottom: 58px
+		margin-top: 78px
+	.read
+		&__box
+			+r(992)
+				padding: 30px
+.slider
+	&-reviews
+		.slider__item ul
+			+justify-between
+		.slider__item ul li
+			font-size: 0
+			+r(1200)
+				padding: 0 20px
+			img
+				max-width: 100%
+				height: auto
+		.slick-dots
+			display: flex
+			justify-content: space-between
+			width: 100%
+			max-width: 160px
+			margin: 32px auto 72px
+			li
+				display: inline-block
+				width: 20px
+				height: 20px
+				border-radius: 50px
+				background-color: $white
+				border: 2px solid $black-c0
+				&.slick-active
+					background-color: $orange
+			li button
+				font-size: 0
+				border-color: transparent
+
+.btn
+	&-prev,
+	&-next
+		background-color: transparent
+		cursor: pointer
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 9999
+	&-prev
+		left: -98px
+		+r(1200)
+			left: -30px
+	&-next
+		right: -98px
+		+r(1200)
+			right: -30px
+
+
+.pack
+	.inner
+		+r(768)
+			padding: 0 10px
+	&__content
+		margin: 270px 0 220px
+		position: relative
+		+r(768)
+			overflow-x: scroll
+			margin: 100px 0
+	&__body
+		min-width: 1030px
+		ul
+			position: relative
+		ul li
+			font-size: 16px
+			color: $gray-2e
+			text-align: left
+			padding: 26px 0 16px 0
+			+clr
+			display: flex
+			flex-direction: row
+			justify-content: space-between
+			> ul
+				display: flex
+				justify-content: space-between
+				flex-direction: row
+				li
+					padding: 0
+					height: 100%
+					width: 200px
+					display: flex
+					justify-content: center
+					align-items: center
+					flex-direction: column
+					text-align: center
+					&:nth-child(even)
+						background-color: transparent
+					&:nth-child(odd)
+						background-color: transparent
+				li strong
+					font-size: 16px
+					color: $black-c0
+					display: block
+					em
+						display: block
+						color: $gray-a1
+						font-weight: normal
+						font-style: normal
+				li p
+					font-weight: bold
+					span
+						font-size: 18px
+						text-decoration: line-through
+						color: $gray-ac
+					em
+							font-size: 34px
+							color: $red
+							font-style: normal
+			p
+				max-width: 430px
+				width: 100%
+				display: inline-block
+				vertical-align: middle
+				padding: 0 20px
+			&:nth-child(even)
+				background-color: $white
+			&:nth-child(odd)
+				background-color: #fcfcfc
+	&__borderShadow
+		position: absolute
+		top: 0
+		height: 100%
+		width: 200px
+		right: 200px
+		pointer-events: none
+		box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.031)
+
+	&__link
+		top: calc(100% + 75px)
+		right: 0
+		position: absolute
+		ul li a
+			color: #888888
+			font-size: 16px
+			font-weight: bold
+			+font-family($circle-bld)
+	&__box
+		position: absolute
+		top: 100%
+		right: 0
+		padding: 0 !important
+		background-color: transparent
+		ul li
+			.box
+				width: 100%
+				+cover
+				transition: background-color .24s ease-in-out
+				a
+					text-decoration: none
+					font-size: 24px
+					display: block
+					font-weight: bold
+					padding: 26px 0 16px
+					transition: color .24s ease-in-out
+					+font-family($circle-bld)
+				&_silver
+					background-color: #252525
+					background-image: url('../img/shape-silver.png')
+					&:hover
+						background-image: none
+						background-color: lighten(#252525, 20)
+					a
+						color: $white
+				&_gold
+					background-color: #f53300
+					background-image: url('../img/shape-gold.png')
+					&:hover
+						background-image: none
+						background-color: lighten(#f53300, 20)
+					a
+						color: $white
+				&_platinum
+					background-color: #eeeeee
+					background-image: url('../img/shape-platinum.png')
+					&:hover
+						background-image: none
+						background-color: darken(#eeeeee, 20)
+						a
+							color: $white
+					a
+						color: $black
+	&__item
+		+cover
+		display: block
+		width: 200px
+		height: 200px
+	&__content table
+		box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.031)
+		tr td
+			width: 200px
+			vertical-align: middle
+			text-align: center
+			span
+				display: block
+				color: $gray-a1
+				font-size: 16px
+				+font-family($circle-bld)
+				font-weight: bold
+			strong
+				font-weight: bold
+				+font-family($circle-bld)
+				font-size: $text-md //18px
+			&:first-child
+				font-size: 16px
+				color: $gray-2e
+				width: 460px
+				text-align: left
+				padding: 26px 45px 16px 60px
+		tr
+			&:nth-child(even)
+				background-color: $white
+			&:nth-child(odd)
+				background-color: #fcfcfc
+
+.timer
+	display: inline-block
+div[class*="t-"]
+	display: inline-block
+	color: $white
+	font-size: 39px
+.t
+	&-days,
+	&-hours,
+	&-mins
+		position: relative
+		&:after
+			content: ':'
+			display: block
+			position: absolute
+			bottom: 0
+			left: 100%
+			font-size: 100%
+			color: $white

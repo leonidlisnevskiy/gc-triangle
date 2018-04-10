@@ -4,6 +4,8 @@
 	left: 0
 	width: 100%
 	padding-top: 30px
+	+r(1025)
+		text-align: center
 	&__logo
 		vertical-align: top
 		cursor: pointer
@@ -11,9 +13,17 @@
 		font-size: 0
 		float: left
 		margin-top: 5px
+		display: block
+		+r(768)
+			float: none
+			margin: 5px auto 0
 	&__phone
 		float: right
 		text-align: left
+		display: inline-block
+		+r(768)
+			float: none
+			margin: 25px auto
 		i
 			display: inline-block
 			vertical-align: middle
@@ -51,12 +61,21 @@
 			line-height: 1.1
 			margin-bottom: 50px
 			letter-spacing: -0.20rem
+			+r(1025)
+				font-size: 30px
+				letter-spacing: normal
+			+r(568)
+				font-size: 22px
 	&__date
 		border: 6px solid $orange
 		transform: skewX(-40deg)
 		padding: 12px 0
 		max-width: 310px
 		margin: 0 auto 65px
+		+r(1025)
+			margin: 0 auto 35px
+		+r(568)
+			transform: skewX(0deg)
 		p
 			font-size: $text-md
 			+font-family($circle-reg)
@@ -64,3 +83,5 @@
 			line-height: 1
 			transform: skewX(40deg)
 			color: $white
+			+r(568)
+				transform: skewX(0deg)
