@@ -578,11 +578,13 @@
 	&__content
 		margin: 270px 0 220px
 		position: relative
-		+r(768)
+		+r(992)
 			overflow-x: scroll
 			margin: 100px 0
 	&__body
 		min-width: 1030px
+		+r(992)
+			padding-top: 200px
 		ul
 			position: relative
 		ul li
@@ -648,11 +650,43 @@
 		right: 200px
 		pointer-events: none
 		box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.031)
-
+	&__status
+		position: absolute
+		top: -200px
+		right: 0
+		background-color: transparent !important
+		padding: 0 !important
+		.status
+			width: 200px
+			height: 200px
+			+cover
+			justify-content: center
+			align-items: center
+			display: flex
+			flex-direction: column
+			padding: 0 30px
+			small
+				font-size: 14px
+			&__position
+				font-size: 40px
+				font-weight: bold
+				+font-family($circle-bld)
+			&__text
+				font-size: 14px
+			&_silver
+				background-image: url('../img/status-silver.png')
+				color: $white
+			&_gold
+				color: $white
+				background-image: url('../img/status-gold.png')
+			&_plat
+				color: $black-c0
+				background-image: url('../img/status-plat.png')
 	&__link
 		top: calc(100% + 75px)
 		right: 0
 		position: absolute
+		background-color:  transparent !important
 		ul li a
 			color: #888888
 			font-size: 16px
